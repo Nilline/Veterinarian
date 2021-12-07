@@ -731,11 +731,9 @@ body {
   row-gap: 1.875rem;
 }
 
-.no-webp .why-we-are__row::before{
-  background: url("../img/why-we-are/cat.png") center/cover no-repeat; }
-
 .why-we-are__row::before {
   content: "";
+  background: url("../img/why_we_are/cat.png") center/cover no-repeat;
   left: -297px;
   position: absolute;
   -webkit-transform: translate(0%, 0%);
@@ -838,9 +836,6 @@ body {
   background: url("../img/clinic/decor.svg") center/cover no-repeat;
 }
 
-.no-webp .clinic__video-block::after{
-  background: url("../img/clinic/mouse.png") center/cover no-repeat; }
-
 .clinic__video-block::after {
   pointer-events: none;
   content: "";
@@ -850,6 +845,7 @@ body {
   right: 0;
   height: 130px;
   width: 113px;
+  background: url("../img/clinic/mouse.png") center/cover no-repeat;
 }
 
 .content-clinic p {
@@ -867,6 +863,10 @@ body {
 
 .content-clinic__title:not(:last-child) {
   margin: 0px 0px 78px 0px;
+}
+
+.page__animals {
+  margin: 100px 0px 0px 0px;
 }
 
 .animals__row {
@@ -2328,7 +2328,3 @@ body {
             transform: scale(1.05);
   }
 }
-
-.webp .why-we-are__row::before{ background: url(../img/why-we-are/cat.webp) center/cover no-repeat; }
-
-.webp .clinic__video-block::after{ background: url(../img/clinic/mouse.webp) center/cover no-repeat; }

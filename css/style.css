@@ -204,6 +204,13 @@ body {
      object-fit: contain;
 }
 
+.regulations__title,
+.animals__name,
+.content-why-we-are__title,
+.button {
+  font-family: "segoeprint", sans-serif;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -453,7 +460,6 @@ body {
 
 .button {
   position: relative;
-  font-family: "segoeprint";
   font-size: 1.5625rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -898,7 +904,6 @@ body {
 }
 
 .content-why-we-are__title {
-  font-family: "segoeprint";
   font-size: 1.75rem;
   line-height: 1.25;
   font-weight: 700;
@@ -921,11 +926,9 @@ body {
 
 .clinic__decor-paws {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transform: translate(-48%, 89.5%);
-      -ms-transform: translate(-48%, 89.5%);
-          transform: translate(-48%, 89.5%);
+  -webkit-transform: translate(0%, 89.5%);
+      -ms-transform: translate(0%, 89.5%);
+          transform: translate(0%, 89.5%);
 }
 
 .clinic__decor-paws path {
@@ -1017,6 +1020,14 @@ body {
           transition-delay: 3.9s;
 }
 
+.clinic__title-adaprive {
+  position: relative;
+}
+
+.clinic__row {
+  position: relative;
+}
+
 .clinic__play {
   position: absolute;
   bottom: -25px;
@@ -1081,6 +1092,11 @@ body {
   font-weight: 800;
 }
 
+.animals {
+  position: relative;
+  z-index: 1;
+}
+
 .animals__title {
   margin-bottom: 50px;
 }
@@ -1130,7 +1146,6 @@ body {
 .animals__name {
   position: absolute;
   bottom: 0;
-  font-family: "segoeprint";
   font-size: 1.75rem;
   line-height: 1.75;
   font-weight: 700;
@@ -1151,6 +1166,18 @@ body {
 .specialists__title {
   text-align: center;
   margin-bottom: 1.875rem;
+}
+
+.specialists__title-content {
+  font-size: 1.75rem;
+  line-height: 1.2142857143;
+  font-weight: 600;
+  text-shadow: 0px 5px 20px rgba(0, 25, 34, 0.2);
+  padding: 16px 0px 0px 0px;
+}
+
+.specialists__title-content:not(:last-child) {
+  margin-bottom: 2.1875rem;
 }
 
 .specialists__row {
@@ -1273,18 +1300,6 @@ body {
   padding: 10px 0px 30px 0px;
 }
 
-.content-specialists__title {
-  font-size: 1.75rem;
-  line-height: 1.2142857143;
-  font-weight: 600;
-  text-shadow: 0px 5px 20px rgba(0, 25, 34, 0.2);
-  padding: 16px 0px 0px 0px;
-}
-
-.content-specialists__title:not(:last-child) {
-  margin-bottom: 2.1875rem;
-}
-
 .content-specialists__text {
   line-height: 1.3888888889;
   font-weight: 600;
@@ -1292,6 +1307,54 @@ body {
 
 .content-specialists__text:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.regulations__items {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12, 1fr);
+  gap: 70px 20px;
+}
+
+.regulations__image-ibg {
+  padding-bottom: 36.154%;
+}
+
+.regulations__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(70px, 21.4285714286%) 1fr;
+  grid-template-columns: minmax(70px, 21.4285714286%) 1fr;
+  min-height: 243px;
+  -webkit-column-gap: 1.25rem;
+     -moz-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+}
+
+.regulations__icon-ibg {
+  width: 100%;
+  padding-bottom: 100%;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.regulations__title {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-weight: 700;
+  text-shadow: 0px 5px 20px rgba(0, 25, 34, 0.2);
+}
+
+.regulations__title:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.regulations__text {
+  line-height: 1.6666666667;
+  font-weight: 600;
 }
 
 .page {
@@ -1523,9 +1586,29 @@ body {
   }
 }
 
+@media (min-width: 29.93625em) {
+  .page__animals {
+    margin-bottom: 5rem;
+  }
+
+  .page__specialists {
+    margin-bottom: 5rem;
+  }
+}
+
 @media (min-width: 47.99875em) and (min-width: 81.25em) {
   .mainscreen {
     padding-top: 5rem;
+  }
+}
+
+@media (min-width: 47.99875em) {
+  .page__animals {
+    margin-bottom: 6.25rem;
+  }
+
+  .page__specialists {
+    margin-bottom: 6.25rem;
   }
 }
 
@@ -1617,6 +1700,14 @@ body {
   .clinic__column_padding-right {
     padding: 0px 30px 0px 12px;
   }
+
+  .page__animals {
+    margin-bottom: 7.5rem;
+  }
+
+  .page__specialists {
+    margin-bottom: 7.5rem;
+  }
 }
 
 @media (min-width: 62.5em) {
@@ -1628,6 +1719,54 @@ body {
 @media (min-width: 62.49875em) and (min-width: 81.25em) {
   .content-mainscreen__button {
     margin-left: 8.25rem;
+  }
+}
+
+@media (min-width: 65.625em) {
+  .regulations__image-ibg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 32.3076923077%;
+  }
+
+  .regulations__item_v1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2/span 4;
+  }
+
+  .regulations__item_v2 {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 4;
+    grid-column: 8/span 4;
+  }
+
+  .regulations__item_v3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/span 4;
+  }
+
+  .regulations__item_v4 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9/span 4;
+  }
+
+  .regulations__item_v5 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2/span 4;
+  }
+
+  .regulations__item_v6 {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 4;
+    grid-column: 8/span 4;
   }
 }
 
@@ -1661,12 +1800,18 @@ body {
   .page__why-we-are {
     margin-bottom: 12.0625rem;
   }
+}
 
+@media (min-width: 83.125em) {
   .page__clinic {
     margin-bottom: 15.625rem;
   }
 
   .page__animals {
+    margin-bottom: 10.625rem;
+  }
+
+  .page__specialists {
     margin-bottom: 10.625rem;
   }
 }
@@ -1693,6 +1838,16 @@ body {
 
   .specialists__slider-block::before {
     height: 30.4375rem;
+  }
+}
+
+@media (min-width: 106.875em) {
+  .clinic__decor-paws {
+    left: -15.4375rem;
+  }
+
+  .clinic__decor-paws {
+    bottom: 0rem;
   }
 }
 
@@ -1772,6 +1927,14 @@ body {
   .main-title {
     font-size: 3rem;
   }
+
+  .page__animals {
+    margin-bottom: 6.25rem;
+  }
+
+  .page__specialists {
+    margin-bottom: 6.25rem;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1797,6 +1960,17 @@ body {
   .animals__name {
     line-height: 1;
   }
+
+  .specialists__navigation {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+
+  .specialists__navigation-arrow {
+    min-width: 130px;
+  }
 }
 
 @media (max-width: 20em) {
@@ -1808,11 +1982,11 @@ body {
     margin-bottom: 5rem;
   }
 
-  .page__clinic {
+  .page__animals {
     margin-bottom: 3.75rem;
   }
 
-  .page__animals {
+  .page__specialists {
     margin-bottom: 3.75rem;
   }
 }
@@ -1853,6 +2027,16 @@ body {
   }
 }
 
+@media (max-width: 83.125em) {
+  .clinic__decor-paws {
+    left: -5.9375rem;
+  }
+
+  .clinic__decor-paws {
+    bottom: 2.5rem;
+  }
+}
+
 @media (max-width: 83.75em) {
   .specialists__slider-block {
     padding: 20px 0;
@@ -1886,6 +2070,28 @@ body {
 @media (max-width: 81.25em) {
   .mainscreen__picture-block {
     padding: 4.75rem 0px 0px 0px;
+  }
+}
+
+@media (max-width: 65.62375em) {
+  .regulations__items {
+    gap: 60px 20px;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .regulations__image-ibg {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/span 2;
+    height: 470px;
+    width: 420px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+
+  .regulations__item {
+    min-height: auto;
   }
 }
 
@@ -2078,6 +2284,10 @@ body {
     padding-bottom: 44.2%;
   }
 
+  .clinic__decor-paws {
+    display: none;
+  }
+
   .clinic__title-adaprive {
     text-align: center;
   }
@@ -2112,8 +2322,8 @@ body {
     margin: 0 auto 1.875rem;
   }
 
-  .content-specialists__title:not(:last-child) {
-    margin-bottom: 1.25rem;
+  .specialists__title-content:not(:last-child) {
+    margin-bottom: 1.875rem;
   }
 }
 
@@ -2182,6 +2392,18 @@ body {
 
   .why-we-are__decor-pawh {
     bottom: 1.125rem;
+  }
+
+  .page__clinic {
+    margin-bottom: 8.125rem;
+  }
+
+  .page__animals {
+    margin-bottom: 7.5rem;
+  }
+
+  .page__specialists {
+    margin-bottom: 7.5rem;
   }
 }
 
@@ -2269,6 +2491,22 @@ body {
 
   .specialists__container {
     padding: 0;
+  }
+
+  .regulations__items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 40px 20px;
+  }
+
+  .regulations__image-ibg {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+
+  .regulations__item {
+    -ms-grid-columns: minmax(70px, 90px) 1fr;
+    grid-template-columns: minmax(70px, 90px) 1fr;
   }
 }
 
@@ -2471,6 +2709,45 @@ body {
         -ms-transform: rotate(-180deg);
             transform: rotate(-180deg);
   }
+
+  .regulations__items {
+    gap: 20px 20px;
+  }
+
+  .regulations__image-ibg {
+    height: auto;
+    width: 100%;
+    padding-bottom: 112.0728929385%;
+  }
+
+  .regulations__item {
+    -ms-grid-columns: 60px 1fr;
+    grid-template-columns: 60px 1fr;
+    -webkit-column-gap: 0.625rem;
+       -moz-column-gap: 0.625rem;
+            column-gap: 0.625rem;
+  }
+
+  .regulations__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .regulations__title {
+    font-size: 1.5rem;
+  }
+
+  .regulations__text {
+    font-size: 0.9375rem;
+  }
 }
 
 @media (max-width: 29.99875em) and (max-width: 20em) {
@@ -2496,6 +2773,16 @@ body {
 
   .clinic__play {
     bottom: -4.8125rem;
+  }
+}
+
+@media (max-width: 29.9375em) {
+  .page__animals {
+    margin-bottom: 5rem;
+  }
+
+  .page__specialists {
+    margin-bottom: 5rem;
   }
 }
 
@@ -2827,6 +3114,16 @@ body {
   }
 }
 
+@media (min-width: 83.125em) and (max-width: 106.875em) {
+  .clinic__decor-paws {
+    left: calc(-5.9375rem + -9.5 * (((100vw - 83.125rem)) / ((23.75))));
+  }
+
+  .clinic__decor-paws {
+    bottom: calc(2.5rem + -2.5 * (((100vw - 83.125rem)) / ((23.75))));
+  }
+}
+
 @media (max-width: 47.99875em) and (min-width: 29.93625em) {
   .clinic__column {
     margin-bottom: 4.375rem;
@@ -2901,13 +3198,55 @@ body {
   .page__why-we-are {
     margin-bottom: calc(5rem + 7.0625 * (((100vw - 20rem)) / ((63.75))));
   }
+}
 
+@media (min-width: 62.5em) and (max-width: 83.125em) {
   .page__clinic {
-    margin-bottom: calc(3.75rem + 11.875 * (((100vw - 20rem)) / ((63.75))));
+    margin-bottom: calc(8.125rem + 7.5 * (((100vw - 62.5rem)) / ((20.625))));
   }
 
   .page__animals {
-    margin-bottom: calc(3.75rem + 6.875 * (((100vw - 20rem)) / ((63.75))));
+    margin-bottom: calc(7.5rem + 3.125 * (((100vw - 62.5rem)) / ((20.625))));
+  }
+
+  .page__specialists {
+    margin-bottom: calc(7.5rem + 3.125 * (((100vw - 62.5rem)) / ((20.625))));
+  }
+}
+
+@media (min-width: 6.125em) and (max-width: 62.375em) {
+  .page__clinic {
+    margin-bottom: calc(3.75rem + 4.375 * (((100vw - 6.125rem)) / ((56.25))));
+  }
+}
+
+@media (min-width: 48em) and (max-width: 62.49875em) {
+  .page__animals {
+    margin-bottom: calc(6.25rem + 1.25 * (((100vw - 48rem)) / ((14.49875))));
+  }
+
+  .page__specialists {
+    margin-bottom: calc(6.25rem + 1.25 * (((100vw - 48rem)) / ((14.49875))));
+  }
+}
+
+@media (min-width: 29.9375em) and (max-width: 47.99875em) {
+  .page__animals {
+    margin-bottom: calc(5rem + 1.25 * (((100vw - 29.9375rem)) / ((18.06125))));
+  }
+
+  .page__specialists {
+    margin-bottom: calc(5rem + 1.25 * (((100vw - 29.9375rem)) / ((18.06125))));
+  }
+}
+
+@media (min-width: 20em) and (max-width: 29.93625em) {
+  .page__animals {
+    margin-bottom: calc(3.75rem + 1.25 * (((100vw - 20rem)) / ((9.93625))));
+  }
+
+  .page__specialists {
+    margin-bottom: calc(3.75rem + 1.25 * (((100vw - 20rem)) / ((9.93625))));
   }
 }
 

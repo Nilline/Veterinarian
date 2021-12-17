@@ -5,7 +5,7 @@
 	<title>Вет Клиника</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20211214165055">
+	<link rel="stylesheet" href="css/style.min.css?_v=20211217114107">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +55,7 @@
 									</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">
+									<a data-goto="specialists" href="#" class="menu__link">
 										<svg width="53" height="25" viewBox="0 0 53 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M1 10.7436H11L14 1L18 21L21.5 10.7436H52" stroke="#D5D5FB" stroke-width="2" stroke-linecap="round" />
 										</svg>
@@ -63,7 +63,7 @@
 									</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">
+									<a data-goto="price" href="#" class="menu__link">
 										<svg width="53" height="25" viewBox="0 0 53 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M1 10.7436H11L14 1L18 21L21.5 10.7436H52" stroke="#D5D5FB" stroke-width="2" stroke-linecap="round" />
 										</svg>
@@ -71,7 +71,7 @@
 									</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">
+									<a data-goto="reviews" href="#" class="menu__link">
 										<svg width="53" height="25" viewBox="0 0 53 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M1 10.7436H11L14 1L18 21L21.5 10.7436H52" stroke="#D5D5FB" stroke-width="2" stroke-linecap="round" />
 										</svg>
@@ -159,21 +159,23 @@
 												</p>
 												<div class="content-mainscreen__picture content-mainscreen__picture_one"></div>
 											</div>
-											<button type="button" class="content-mainscreen__button content-mainscreen__button_sign-up button button_decor">
-												<svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M36.776 28.6293C36.4424 28.7507 36.132 28.9147 35.8503 29.1154C35.3778 29.4484 33.9396 27.4351 31.3547 25.8941C29.6811 24.8972 27.8371 24.5866 26.1656 25.195C24.5214 25.7935 23.323 27.1721 22.6734 28.9675C21.6713 31.7433 21.9057 34.2301 21.4575 34.2911C21.1901 34.3295 20.9247 34.3947 20.666 34.4889C17.9732 35.469 16.8651 39.2141 18.1878 42.848C19.513 46.4889 22.7678 48.6421 25.4606 47.662C26.3729 47.3299 28.0733 46.0278 28.8261 45.3846C30.9269 43.5833 35.3946 42.0672 37.3567 42.1619C38.4125 42.2135 40.5957 42.1532 41.5625 41.8014C44.2519 40.8225 45.3612 37.0809 44.036 33.44C42.7214 29.8071 39.4687 27.6492 36.776 28.6293Z" fill="white" />
-													<path d="M16.1317 26.7659C13.9408 23.8288 10.3925 22.882 8.20683 24.6514C6.01986 26.4173 6.02448 30.2325 8.2166 33.173C10.4053 36.1148 13.957 37.0604 16.1393 35.2922C18.3284 33.5216 18.3238 29.7064 16.1317 26.7659Z" fill="white" />
-													<path d="M19.672 23.2742C22.396 21.6702 22.9653 17.4301 20.9377 13.7975C18.9134 10.1636 15.0609 8.51858 12.337 10.1226C9.61175 11.7232 9.04705 15.9655 11.0713 19.5993C13.0977 23.2285 16.9468 24.8748 19.672 23.2742Z" fill="white" />
-													<path d="M39.6435 13.2052C36.8318 13.2547 34.7223 16.2608 34.9353 19.9178C35.1474 23.5829 37.5984 26.5038 40.4067 26.4555C43.2184 26.406 45.3279 23.3999 45.117 19.7382C44.904 16.0813 42.4552 13.1557 39.6435 13.2052Z" fill="white" />
-													<path d="M29.9821 19.549C33.1385 19.0167 35.0516 15.2378 34.259 11.1007C33.4665 6.96359 30.2646 4.04504 27.1069 4.57389C23.9505 5.10622 22.0374 8.88511 22.83 13.0222C23.6226 17.1593 26.8257 20.0813 29.9821 19.549Z" fill="white" />
-												</svg>
-												Записаться на приём
-											</button>
+											<div class="content-mainscreen__button-block">
+												<button type="button" class="content-mainscreen__button content-mainscreen__button_sign-up button button_decor">
+													<svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M36.776 28.6293C36.4424 28.7507 36.132 28.9147 35.8503 29.1154C35.3778 29.4484 33.9396 27.4351 31.3547 25.8941C29.6811 24.8972 27.8371 24.5866 26.1656 25.195C24.5214 25.7935 23.323 27.1721 22.6734 28.9675C21.6713 31.7433 21.9057 34.2301 21.4575 34.2911C21.1901 34.3295 20.9247 34.3947 20.666 34.4889C17.9732 35.469 16.8651 39.2141 18.1878 42.848C19.513 46.4889 22.7678 48.6421 25.4606 47.662C26.3729 47.3299 28.0733 46.0278 28.8261 45.3846C30.9269 43.5833 35.3946 42.0672 37.3567 42.1619C38.4125 42.2135 40.5957 42.1532 41.5625 41.8014C44.2519 40.8225 45.3612 37.0809 44.036 33.44C42.7214 29.8071 39.4687 27.6492 36.776 28.6293Z" fill="white" />
+														<path d="M16.1317 26.7659C13.9408 23.8288 10.3925 22.882 8.20683 24.6514C6.01986 26.4173 6.02448 30.2325 8.2166 33.173C10.4053 36.1148 13.957 37.0604 16.1393 35.2922C18.3284 33.5216 18.3238 29.7064 16.1317 26.7659Z" fill="white" />
+														<path d="M19.672 23.2742C22.396 21.6702 22.9653 17.4301 20.9377 13.7975C18.9134 10.1636 15.0609 8.51858 12.337 10.1226C9.61175 11.7232 9.04705 15.9655 11.0713 19.5993C13.0977 23.2285 16.9468 24.8748 19.672 23.2742Z" fill="white" />
+														<path d="M39.6435 13.2052C36.8318 13.2547 34.7223 16.2608 34.9353 19.9178C35.1474 23.5829 37.5984 26.5038 40.4067 26.4555C43.2184 26.406 45.3279 23.3999 45.117 19.7382C44.904 16.0813 42.4552 13.1557 39.6435 13.2052Z" fill="white" />
+														<path d="M29.9821 19.549C33.1385 19.0167 35.0516 15.2378 34.259 11.1007C33.4665 6.96359 30.2646 4.04504 27.1069 4.57389C23.9505 5.10622 22.0374 8.88511 22.83 13.0222C23.6226 17.1593 26.8257 20.0813 29.9821 19.549Z" fill="white" />
+													</svg>
+													Записаться на приём
+												</button>
+											</div>
 										</div>
 									</div>
 									<div data-da=".content-mainscreen__picture_one,999.98,0" class="mainscreen__picture-block">
 										<div class="mainscreen__picture mainscreen__picture_ibg">
-											<picture><source srcset="img/mainscreen/sing-up.webp" type="image/webp"><img src="img/mainscreen/sing-up.png?_v=1639493455109" alt="картинка" class="mainscreen__image"></picture>
+											<picture><source srcset="img/mainscreen/sing-up.webp" type="image/webp"><img src="img/mainscreen/sing-up.png?_v=1639734067312" alt="картинка" class="mainscreen__image"></picture>
 										</div>
 									</div>
 								</div>
@@ -186,21 +188,23 @@
 												</h1>
 												<div class="content-mainscreen__picture content-mainscreen__picture_two"></div>
 											</div>
-											<button type="button" class="content-mainscreen__button content-mainscreen__button_sign-up button button_decor">
-												<svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M36.776 28.6293C36.4424 28.7507 36.132 28.9147 35.8503 29.1154C35.3778 29.4484 33.9396 27.4351 31.3547 25.8941C29.6811 24.8972 27.8371 24.5866 26.1656 25.195C24.5214 25.7935 23.323 27.1721 22.6734 28.9675C21.6713 31.7433 21.9057 34.2301 21.4575 34.2911C21.1901 34.3295 20.9247 34.3947 20.666 34.4889C17.9732 35.469 16.8651 39.2141 18.1878 42.848C19.513 46.4889 22.7678 48.6421 25.4606 47.662C26.3729 47.3299 28.0733 46.0278 28.8261 45.3846C30.9269 43.5833 35.3946 42.0672 37.3567 42.1619C38.4125 42.2135 40.5957 42.1532 41.5625 41.8014C44.2519 40.8225 45.3612 37.0809 44.036 33.44C42.7214 29.8071 39.4687 27.6492 36.776 28.6293Z" fill="white" />
-													<path d="M16.1317 26.7659C13.9408 23.8288 10.3925 22.882 8.20683 24.6514C6.01986 26.4173 6.02448 30.2325 8.2166 33.173C10.4053 36.1148 13.957 37.0604 16.1393 35.2922C18.3284 33.5216 18.3238 29.7064 16.1317 26.7659Z" fill="white" />
-													<path d="M19.672 23.2742C22.396 21.6702 22.9653 17.4301 20.9377 13.7975C18.9134 10.1636 15.0609 8.51858 12.337 10.1226C9.61175 11.7232 9.04705 15.9655 11.0713 19.5993C13.0977 23.2285 16.9468 24.8748 19.672 23.2742Z" fill="white" />
-													<path d="M39.6435 13.2052C36.8318 13.2547 34.7223 16.2608 34.9353 19.9178C35.1474 23.5829 37.5984 26.5038 40.4067 26.4555C43.2184 26.406 45.3279 23.3999 45.117 19.7382C44.904 16.0813 42.4552 13.1557 39.6435 13.2052Z" fill="white" />
-													<path d="M29.9821 19.549C33.1385 19.0167 35.0516 15.2378 34.259 11.1007C33.4665 6.96359 30.2646 4.04504 27.1069 4.57389C23.9505 5.10622 22.0374 8.88511 22.83 13.0222C23.6226 17.1593 26.8257 20.0813 29.9821 19.549Z" fill="white" />
-												</svg>
-												Заказать услугу
-											</button>
+											<div class="content-mainscreen__button-block">
+												<button type="button" class="content-mainscreen__button content-mainscreen__button_sign-up button button_decor">
+													<svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M36.776 28.6293C36.4424 28.7507 36.132 28.9147 35.8503 29.1154C35.3778 29.4484 33.9396 27.4351 31.3547 25.8941C29.6811 24.8972 27.8371 24.5866 26.1656 25.195C24.5214 25.7935 23.323 27.1721 22.6734 28.9675C21.6713 31.7433 21.9057 34.2301 21.4575 34.2911C21.1901 34.3295 20.9247 34.3947 20.666 34.4889C17.9732 35.469 16.8651 39.2141 18.1878 42.848C19.513 46.4889 22.7678 48.6421 25.4606 47.662C26.3729 47.3299 28.0733 46.0278 28.8261 45.3846C30.9269 43.5833 35.3946 42.0672 37.3567 42.1619C38.4125 42.2135 40.5957 42.1532 41.5625 41.8014C44.2519 40.8225 45.3612 37.0809 44.036 33.44C42.7214 29.8071 39.4687 27.6492 36.776 28.6293Z" fill="white" />
+														<path d="M16.1317 26.7659C13.9408 23.8288 10.3925 22.882 8.20683 24.6514C6.01986 26.4173 6.02448 30.2325 8.2166 33.173C10.4053 36.1148 13.957 37.0604 16.1393 35.2922C18.3284 33.5216 18.3238 29.7064 16.1317 26.7659Z" fill="white" />
+														<path d="M19.672 23.2742C22.396 21.6702 22.9653 17.4301 20.9377 13.7975C18.9134 10.1636 15.0609 8.51858 12.337 10.1226C9.61175 11.7232 9.04705 15.9655 11.0713 19.5993C13.0977 23.2285 16.9468 24.8748 19.672 23.2742Z" fill="white" />
+														<path d="M39.6435 13.2052C36.8318 13.2547 34.7223 16.2608 34.9353 19.9178C35.1474 23.5829 37.5984 26.5038 40.4067 26.4555C43.2184 26.406 45.3279 23.3999 45.117 19.7382C44.904 16.0813 42.4552 13.1557 39.6435 13.2052Z" fill="white" />
+														<path d="M29.9821 19.549C33.1385 19.0167 35.0516 15.2378 34.259 11.1007C33.4665 6.96359 30.2646 4.04504 27.1069 4.57389C23.9505 5.10622 22.0374 8.88511 22.83 13.0222C23.6226 17.1593 26.8257 20.0813 29.9821 19.549Z" fill="white" />
+													</svg>
+													Заказать услугу
+												</button>
+											</div>
 										</div>
 									</div>
 									<div data-da=".content-mainscreen__picture_two,999.98,0" class="mainscreen__picture-block">
 										<div class="mainscreen__picture mainscreen__picture_ibg">
-											<picture><source srcset="img/mainscreen/order.webp" type="image/webp"><img src="img/mainscreen/order.png?_v=1639493455109" alt="картинка" class="mainscreen__image"></picture>
+											<picture><source srcset="img/mainscreen/order.webp" type="image/webp"><img src="img/mainscreen/order.png?_v=1639734067312" alt="картинка" class="mainscreen__image"></picture>
 										</div>
 									</div>
 								</div>
@@ -218,21 +222,23 @@
 												</p>
 												<div class="content-mainscreen__picture content-mainscreen__picture_three"></div>
 											</div>
-											<button type="button" class="content-mainscreen__button content-mainscreen__button_sign-up button button_decor">
-												<svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M36.776 28.6293C36.4424 28.7507 36.132 28.9147 35.8503 29.1154C35.3778 29.4484 33.9396 27.4351 31.3547 25.8941C29.6811 24.8972 27.8371 24.5866 26.1656 25.195C24.5214 25.7935 23.323 27.1721 22.6734 28.9675C21.6713 31.7433 21.9057 34.2301 21.4575 34.2911C21.1901 34.3295 20.9247 34.3947 20.666 34.4889C17.9732 35.469 16.8651 39.2141 18.1878 42.848C19.513 46.4889 22.7678 48.6421 25.4606 47.662C26.3729 47.3299 28.0733 46.0278 28.8261 45.3846C30.9269 43.5833 35.3946 42.0672 37.3567 42.1619C38.4125 42.2135 40.5957 42.1532 41.5625 41.8014C44.2519 40.8225 45.3612 37.0809 44.036 33.44C42.7214 29.8071 39.4687 27.6492 36.776 28.6293Z" fill="white" />
-													<path d="M16.1317 26.7659C13.9408 23.8288 10.3925 22.882 8.20683 24.6514C6.01986 26.4173 6.02448 30.2325 8.2166 33.173C10.4053 36.1148 13.957 37.0604 16.1393 35.2922C18.3284 33.5216 18.3238 29.7064 16.1317 26.7659Z" fill="white" />
-													<path d="M19.672 23.2742C22.396 21.6702 22.9653 17.4301 20.9377 13.7975C18.9134 10.1636 15.0609 8.51858 12.337 10.1226C9.61175 11.7232 9.04705 15.9655 11.0713 19.5993C13.0977 23.2285 16.9468 24.8748 19.672 23.2742Z" fill="white" />
-													<path d="M39.6435 13.2052C36.8318 13.2547 34.7223 16.2608 34.9353 19.9178C35.1474 23.5829 37.5984 26.5038 40.4067 26.4555C43.2184 26.406 45.3279 23.3999 45.117 19.7382C44.904 16.0813 42.4552 13.1557 39.6435 13.2052Z" fill="white" />
-													<path d="M29.9821 19.549C33.1385 19.0167 35.0516 15.2378 34.259 11.1007C33.4665 6.96359 30.2646 4.04504 27.1069 4.57389C23.9505 5.10622 22.0374 8.88511 22.83 13.0222C23.6226 17.1593 26.8257 20.0813 29.9821 19.549Z" fill="white" />
-												</svg>
-												Вызвать врача на дом
-											</button>
+											<div class="content-mainscreen__button-block">
+												<button type="button" class="content-mainscreen__button content-mainscreen__button_sign-up button button_decor">
+													<svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M36.776 28.6293C36.4424 28.7507 36.132 28.9147 35.8503 29.1154C35.3778 29.4484 33.9396 27.4351 31.3547 25.8941C29.6811 24.8972 27.8371 24.5866 26.1656 25.195C24.5214 25.7935 23.323 27.1721 22.6734 28.9675C21.6713 31.7433 21.9057 34.2301 21.4575 34.2911C21.1901 34.3295 20.9247 34.3947 20.666 34.4889C17.9732 35.469 16.8651 39.2141 18.1878 42.848C19.513 46.4889 22.7678 48.6421 25.4606 47.662C26.3729 47.3299 28.0733 46.0278 28.8261 45.3846C30.9269 43.5833 35.3946 42.0672 37.3567 42.1619C38.4125 42.2135 40.5957 42.1532 41.5625 41.8014C44.2519 40.8225 45.3612 37.0809 44.036 33.44C42.7214 29.8071 39.4687 27.6492 36.776 28.6293Z" fill="white" />
+														<path d="M16.1317 26.7659C13.9408 23.8288 10.3925 22.882 8.20683 24.6514C6.01986 26.4173 6.02448 30.2325 8.2166 33.173C10.4053 36.1148 13.957 37.0604 16.1393 35.2922C18.3284 33.5216 18.3238 29.7064 16.1317 26.7659Z" fill="white" />
+														<path d="M19.672 23.2742C22.396 21.6702 22.9653 17.4301 20.9377 13.7975C18.9134 10.1636 15.0609 8.51858 12.337 10.1226C9.61175 11.7232 9.04705 15.9655 11.0713 19.5993C13.0977 23.2285 16.9468 24.8748 19.672 23.2742Z" fill="white" />
+														<path d="M39.6435 13.2052C36.8318 13.2547 34.7223 16.2608 34.9353 19.9178C35.1474 23.5829 37.5984 26.5038 40.4067 26.4555C43.2184 26.406 45.3279 23.3999 45.117 19.7382C44.904 16.0813 42.4552 13.1557 39.6435 13.2052Z" fill="white" />
+														<path d="M29.9821 19.549C33.1385 19.0167 35.0516 15.2378 34.259 11.1007C33.4665 6.96359 30.2646 4.04504 27.1069 4.57389C23.9505 5.10622 22.0374 8.88511 22.83 13.0222C23.6226 17.1593 26.8257 20.0813 29.9821 19.549Z" fill="white" />
+													</svg>
+													Вызвать врача на дом
+												</button>
+											</div>
 										</div>
 									</div>
 									<div data-da=".content-mainscreen__picture_three,999.98,0" class="mainscreen__picture-block">
 										<div class="mainscreen__picture mainscreen__picture_ibg">
-											<picture><source srcset="img/mainscreen/call.webp" type="image/webp"><img src="img/mainscreen/call.png?_v=1639493455109" alt="картинка" class="mainscreen__image"></picture>
+											<picture><source srcset="img/mainscreen/call.webp" type="image/webp"><img src="img/mainscreen/call.png?_v=1639734067312" alt="картинка" class="mainscreen__image"></picture>
 										</div>
 									</div>
 								</div>
@@ -254,7 +260,7 @@
 						<div class="why-we-are__column">
 							<div class="why-we-are__content content-why-we-are">
 								<div class="content-why-we-are__image-ibg">
-									<img src="img/why_we_are/record.svg?_v=1639493455109" alt="icon">
+									<img src="img/why_we_are/record.svg?_v=1639734067312" alt="icon">
 								</div>
 								<div class="content-why-we-are__content">
 									<h4 class="content-why-we-are__title">Запись <br> на прием</h4>
@@ -267,7 +273,7 @@
 						<div class="why-we-are__column">
 							<div class="why-we-are__content content-why-we-are">
 								<div class="content-why-we-are__image-ibg">
-									<img src="img/why_we_are/laboratory.svg?_v=1639493455109" alt="icon">
+									<img src="img/why_we_are/laboratory.svg?_v=1639734067312" alt="icon">
 								</div>
 								<div class="content-why-we-are__content">
 									<h4 class="content-why-we-are__title">Своя <br> лаборатория</h4>
@@ -280,7 +286,7 @@
 						<div class="why-we-are__column">
 							<div class="why-we-are__content content-why-we-are">
 								<div class="content-why-we-are__image-ibg">
-									<img src="img/why_we_are/command.svg?_v=1639493455109" alt="icon">
+									<img src="img/why_we_are/command.svg?_v=1639734067312" alt="icon">
 								</div>
 								<div class="content-why-we-are__content">
 									<h4 class="content-why-we-are__title">Профессиональная <br> команда</h4>
@@ -293,7 +299,7 @@
 						<div class="why-we-are__column">
 							<div class="why-we-are__content content-why-we-are">
 								<div class="content-why-we-are__image-ibg">
-									<img src="img/why_we_are/doctor-at-home.svg?_v=1639493455109" alt="icon">
+									<img src="img/why_we_are/doctor-at-home.svg?_v=1639734067312" alt="icon">
 								</div>
 								<div class="content-why-we-are__content">
 									<h4 class="content-why-we-are__title">Выезд врача <br> на дом</h4>
@@ -359,7 +365,7 @@
 					<div class="clinic__row">
 						<div class="clinic__column clinic__column_padding-left">
 							<div class="clinic__video-block clinic__video-block_ibg">
-								<picture><source srcset="img/clinic/clinic.webp" type="image/webp"><img src="img/clinic/clinic.png?_v=1639493455109" alt="Картинка"></picture>
+								<picture><source srcset="img/clinic/clinic.webp" type="image/webp"><img src="img/clinic/clinic.png?_v=1639734067312" alt="Картинка"></picture>
 								<a href="#" data-popup="#video-veterinary-clinic" class="clinic__play">
 									<svg fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M58.3158 39.4225C57.0821 38.6897 55.6764 38.2968 54.2415 38.2835C52.8067 38.2703 51.3939 38.6373 50.147 39.3472C48.9 40.0571 47.8632 41.0846 47.1421 42.3251C46.421 43.5657 46.0413 44.9751 46.0417 46.41V83.59C46.0413 85.0249 46.421 86.4343 47.1421 87.6749C47.8632 88.9154 48.9 89.9429 50.147 90.6528C51.3939 91.3627 52.8067 91.7297 54.2415 91.7164C55.6764 91.7032 57.0821 91.3103 58.3158 90.5775L93.5512 69.6583C94.3595 69.1787 95.0291 68.497 95.4942 67.6803C95.9593 66.8636 96.2038 65.9399 96.2038 65C96.2038 64.0601 95.9593 63.1364 95.4942 62.3197C95.0291 61.5029 94.3595 60.8213 93.5512 60.3417L58.3158 39.4225V39.4225ZM0 65C0 29.1037 29.1037 0 65 0C100.896 0 130 29.1037 130 65C130 100.896 100.896 130 65 130C29.1037 130 0 100.896 0 65ZM65 8.125C33.5888 8.125 8.125 33.5888 8.125 65C8.125 96.4112 33.5888 121.875 65 121.875C96.4112 121.875 121.875 96.4112 121.875 65C121.875 33.5888 96.4112 8.125 65 8.125Z" fill="#605DD3" />
@@ -411,43 +417,54 @@
 					</h2>
 					<div class="animals__row">
 						<div class="animals__item-ibg animals__item-ibg_top-left">
-							<picture><source srcset="img/animals/dogs.webp" type="image/webp"><img src="img/animals/dogs.png?_v=1639493455109" alt="Картинка"></picture>
+							<picture><source srcset="img/animals/dogs.webp" type="image/webp"><img src="img/animals/dogs.png?_v=1639734067312" alt="Картинка"></picture>
 							<span class="animals__name">Собаки</span>
 						</div>
 						<div class="animals__item-ibg animals__item-ibg_top-right">
-							<picture><source srcset="img/animals/cats.webp" type="image/webp"><img src="img/animals/cats.png?_v=1639493455109" alt="Картинка"></picture>
+							<picture><source srcset="img/animals/cats.webp" type="image/webp"><img src="img/animals/cats.png?_v=1639734067312" alt="Картинка"></picture>
 							<span class="animals__name">Кошки</span>
 						</div>
 						<div class="animals__item-ibg animals__item-ibg_bottom">
-							<picture><source srcset="img/animals/birds.webp" type="image/webp"><img src="img/animals/birds.png?_v=1639493455109" alt="Картинка"></picture>
+							<picture><source srcset="img/animals/birds.webp" type="image/webp"><img src="img/animals/birds.png?_v=1639734067312" alt="Картинка"></picture>
 							<span class="animals__name">Птицы</span>
 						</div>
 						<div class="animals__item-ibg animals__item-ibg_bottom">
-							<picture><source srcset="img/animals/rodents.webp" type="image/webp"><img src="img/animals/rodents.png?_v=1639493455109" alt="Картинка"></picture>
+							<picture><source srcset="img/animals/rodents.webp" type="image/webp"><img src="img/animals/rodents.png?_v=1639734067312" alt="Картинка"></picture>
 							<span class="animals__name">Грызуны</span>
 						</div>
 						<div class="animals__item-ibg animals__item-ibg_bottom">
-							<picture><source srcset="img/animals/reptile.webp" type="image/webp"><img src="img/animals/reptile.png?_v=1639493455109" alt="Картинка"></picture>
+							<picture><source srcset="img/animals/reptile.webp" type="image/webp"><img src="img/animals/reptile.png?_v=1639734067312" alt="Картинка"></picture>
 							<span class="animals__name">Рептилии</span>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="page__specialists specialists">
+			<section id="specialists" class="page__specialists specialists">
 				<div class="specialists__container">
 					<div class="specialists__slider-block">
 						<div class="specialists__slider">
 							<h2 class="specialists__title title">Специалисты <span>которым доверяют</span></h2>
-							<div data-spollers="479.98,max" class="specialists__swiper">
-								<div class="specialists__slide">
-									<div class="specialists__body">
-										<div class="specialists__row">
-											<div class="specialists__column specialists__column_picture">
+							<div data-spollers="479.98,max" class="specialists__body">
+								<div class="specialists__slider-image-body">
+									<div class="specialists__slider-image">
+										<div class="specialists__swiper">
+											<div class="specialists__slide">
 												<div class="specialists__picture-ibg">
-													<picture><source srcset="img/specialists/Orlov.webp" type="image/webp"><img src="img/specialists/Orlov.jpg?_v=1639493455109" alt="Фото"></picture>
+													<picture><source srcset="img/specialists/Orlov.webp" type="image/webp"><img src="img/specialists/Orlov.jpg?_v=1639734067312" alt="Фото"></picture>
 												</div>
 											</div>
-											<div class="specialists__column specialists__column_content">
+											<div class="specialists__slide">
+												<div class="specialists__picture-ibg">
+													<picture><source srcset="img/specialists/anna.webp" type="image/webp"><img src="img/specialists/anna.jpg?_v=1639734067312" alt="Фото"></picture>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="specialists__slider-content-body">
+									<div class="specialists__slider-content">
+										<div class="specialists__swiper">
+											<div class="specialists__slide specialists__slide_content">
 												<h3 class="specialists__title-content">ОРЛОВ Евгений Владимирович
 													(главный врач, хирург)</h3>
 												<button data-spoller type="button" class="specialists__spoller-title">Подробнее</button>
@@ -468,19 +485,9 @@
 													</p>
 												</div>
 											</div>
-										</div>
-									</div>
-								</div>
-								<div class="specialists__slide">
-									<div class="specialists__body">
-										<div class="specialists__row">
-											<div class="specialists__column specialists__column_picture">
-												<div class="specialists__picture-ibg">
-													<picture><source srcset="img/specialists/anna.webp" type="image/webp"><img src="img/specialists/anna.jpg?_v=1639493455109" alt="Фото"></picture>
-												</div>
-											</div>
-											<div class="specialists__column specialists__column_content">
-												<h3 class="specialists__title-content">Олейник Анна Александровна (терапевт)</h3>
+											<div class="specialists__slide specialists__slide_content">
+												<h3 class="specialists__title-content">Олейник Анна Александровна
+													(терапевт)</h3>
 												<button data-spoller type="button" class="specialists__spoller-title">Подробнее</button>
 												<div class="specialists__content content-specialists">
 													<p class="content-specialists__text">
@@ -573,11 +580,11 @@
 					</svg>
 					<div data-spollers="479.98,max" class="regulations__items">
 						<div class="regulations__image-ibg">
-							<picture><source srcset="img/regulations/dog.webp" type="image/webp"><img src="img/regulations/dog.png?_v=1639493455109" alt="Картинка"></picture>
+							<picture><source srcset="img/regulations/dog.webp" type="image/webp"><img src="img/regulations/dog.png?_v=1639734067312" alt="Картинка"></picture>
 						</div>
 						<div class="regulations__item regulations__item_v1">
 							<div class="regulations__icon-ibg">
-								<img src="img/regulations/syringe.svg?_v=1639493455109" alt="Иконка">
+								<img src="img/regulations/syringe.svg?_v=1639734067312" alt="Иконка">
 							</div>
 							<div class="regulations__content">
 								<h4 data-spoller class="regulations__title">НЕ выполняем</h4>
@@ -589,7 +596,7 @@
 						</div>
 						<div class="regulations__item regulations__item_v2">
 							<div class="regulations__icon-ibg">
-								<img src="img/regulations/plus.svg?_v=1639493455109" alt="Иконка">
+								<img src="img/regulations/plus.svg?_v=1639734067312" alt="Иконка">
 							</div>
 							<div class="regulations__content">
 								<h4 data-spoller class="regulations__title">НЕ придумываем</h4>
@@ -601,7 +608,7 @@
 						</div>
 						<div class="regulations__item regulations__item_v3">
 							<div class="regulations__icon-ibg">
-								<img src="img/regulations/scalpel.svg?_v=1639493455109" alt="Иконка">
+								<img src="img/regulations/scalpel.svg?_v=1639734067312" alt="Иконка">
 							</div>
 							<div class="regulations__content">
 								<h4 data-spoller class="regulations__title">НЕ удаляем</h4>
@@ -613,7 +620,7 @@
 						</div>
 						<div class="regulations__item regulations__item_v4">
 							<div class="regulations__icon-ibg">
-								<img src="img/regulations/case.svg?_v=1639493455109" alt="Иконка">
+								<img src="img/regulations/case.svg?_v=1639734067312" alt="Иконка">
 							</div>
 							<div class="regulations__content">
 								<h4 data-spoller class="regulations__title">НЕ боимся</h4>
@@ -625,7 +632,7 @@
 						</div>
 						<div class="regulations__item regulations__item_v5">
 							<div class="regulations__icon-ibg">
-								<img src="img/regulations/head-dog.svg?_v=1639493455109" alt="Иконка">
+								<img src="img/regulations/head-dog.svg?_v=1639734067312" alt="Иконка">
 							</div>
 							<div class="regulations__content">
 								<h4 data-spoller class="regulations__title">НЕ усыпляем</h4>
@@ -636,7 +643,7 @@
 						</div>
 						<div class="regulations__item regulations__item_v6">
 							<div class="regulations__icon-ibg">
-								<img src="img/regulations/jar.svg?_v=1639493455109" alt="Иконка">
+								<img src="img/regulations/jar.svg?_v=1639734067312" alt="Иконка">
 							</div>
 							<div class="regulations__content">
 								<h4 data-spoller class="regulations__title">НЕ используем</h4>
@@ -648,7 +655,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="page__price price">
+			<div id="price" class="page__price price">
 				<div class="price__container">
 					<h2 class="price__title title">
 						<svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -727,7 +734,7 @@
 													</div>
 												</div>
 												<button type="button" class="slide-price_button button">
-													<svg class="button_decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<svg class="button__decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<g clip-path="url(#clip0_260_6573)">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M42.2607 78.9002C39.2516 79.4186 36.4751 77.8663 36.0533 75.4358C35.6342 73.0053 37.7322 70.6174 40.7386 70.099C43.7477 69.5834 46.527 71.1329 46.9461 73.5634C47.3678 75.9938 45.2698 78.3846 42.2607 78.9002ZM34.2623 71.7174C36.9329 70.9035 38.5335 68.579 37.8371 66.5259C37.1435 64.4728 34.4139 63.4686 31.7405 64.2826C29.0671 65.0938 27.4665 67.421 28.1629 69.4713C28.8593 71.5272 31.5889 72.5314 34.2623 71.7174ZM27.744 86.0478C27.744 85.7768 27.7072 85.5112 27.6365 85.2568C27.5783 85.0431 28.0094 84.8092 28.6793 84.4457C29.3445 84.0848 30.245 83.5962 31.1358 82.8728C32.2928 81.9324 33 80.6906 33 79.3327C33 77.9968 32.3211 76.7772 31.198 75.8424C30.2418 75.0475 29.2504 74.5444 28.5646 74.1964C28.0048 73.9124 27.6487 73.7317 27.6818 73.58C27.7242 73.3781 27.7468 73.1707 27.7468 72.9605C27.7468 70.7728 25.3395 69 22.3748 69C19.4045 69 17 70.7728 17 72.9605C17 73.7017 17.4922 75.2616 17.7581 75.9696C18.505 77.947 18.4257 81.548 17.843 82.9308C17.529 83.6748 17 85.2568 17 86.0423C17 88.2272 19.4045 90 22.3748 90C25.3366 90.0055 27.744 88.2355 27.744 86.0478ZM37.8371 91.4722C38.5335 89.4187 36.9328 87.0937 34.2623 86.2823C31.5861 85.4682 28.8593 86.4754 28.1629 88.5262C27.4665 90.5797 29.0671 92.9047 31.7405 93.7189C34.4111 94.5302 37.1407 93.5258 37.8371 91.4722ZM40.7391 88.9005C37.7301 88.383 35.6342 85.9967 36.0534 83.5656C36.4725 81.1346 39.2519 79.582 42.2609 80.0995C45.2699 80.617 47.3658 83.0033 46.9466 85.4344C46.5248 87.8654 43.7481 89.418 40.7391 88.9005Z" fill="#D5D5FB" />
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M94.2607 21.9002C91.2516 22.4186 88.4751 20.8663 88.0533 18.4358C87.6342 16.0053 89.7322 13.6174 92.7386 13.099C95.7477 12.5834 98.527 14.1329 98.9461 16.5634C99.3678 18.9938 97.2698 21.3846 94.2607 21.9002ZM86.2623 14.7174C88.9329 13.9035 90.5335 11.579 89.8371 9.52592C89.1435 7.47282 86.4139 6.46864 83.7405 7.28261C81.0671 8.09378 79.4665 10.421 80.1629 12.4713C80.8593 14.5272 83.5889 15.5314 86.2623 14.7174ZM79.744 29.0478C79.744 28.7768 79.7072 28.5112 79.6365 28.2568C79.5783 28.0431 80.0094 27.8092 80.6793 27.4457C81.3445 27.0848 82.245 26.5962 83.1358 25.8728C84.2928 24.9324 85 23.6906 85 22.3327C85 20.9968 84.3211 19.7772 83.198 18.8424C82.2418 18.0475 81.2504 17.5444 80.5646 17.1964C80.0048 16.9124 79.6487 16.7317 79.6818 16.58C79.7242 16.3781 79.7468 16.1707 79.7468 15.9605C79.7468 13.7728 77.3395 12 74.3748 12C71.4045 12 69 13.7728 69 15.9605C69 16.7017 69.4922 18.2616 69.7581 18.9696C70.505 20.947 70.4257 24.548 69.843 25.9308C69.529 26.6748 69 28.2568 69 29.0423C69 31.2272 71.4045 33 74.3748 33C77.3366 33.0055 79.744 31.2355 79.744 29.0478ZM89.8371 34.4722C90.5335 32.4187 88.9328 30.0937 86.2623 29.2823C83.5861 28.4682 80.8593 29.4754 80.1629 31.5262C79.4665 33.5797 81.0671 35.9047 83.7405 36.7189C86.4111 37.5302 89.1407 36.5258 89.8371 34.4722ZM92.7391 31.9005C89.7301 31.383 87.6342 28.9967 88.0534 26.5656C88.4725 24.1346 91.2519 22.582 94.2609 23.0995C97.2699 23.617 99.3658 26.0033 98.9466 28.4344C98.5248 30.8654 95.7481 32.418 92.7391 31.9005Z" fill="#D5D5FB" />
@@ -757,7 +764,7 @@
 										</div>
 										<div class="slide-price__column slide-price__column_right">
 											<div class="slide-price__picture-ibg">
-												<picture><source srcset="img/price/therapy.webp" type="image/webp"><img src="img/price/therapy.jpg?_v=1639493455109" alt="Картинка"></picture>
+												<picture><source srcset="img/price/therapy.webp" type="image/webp"><img src="img/price/therapy.jpg?_v=1639734067312" alt="Картинка"></picture>
 											</div>
 										</div>
 									</div>
@@ -795,7 +802,7 @@
 													</div>
 												</div>
 												<button type="button" class="slide-price_button button">
-													<svg class="button_decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<svg class="button__decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<g clip-path="url(#clip0_260_6573)">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M42.2607 78.9002C39.2516 79.4186 36.4751 77.8663 36.0533 75.4358C35.6342 73.0053 37.7322 70.6174 40.7386 70.099C43.7477 69.5834 46.527 71.1329 46.9461 73.5634C47.3678 75.9938 45.2698 78.3846 42.2607 78.9002ZM34.2623 71.7174C36.9329 70.9035 38.5335 68.579 37.8371 66.5259C37.1435 64.4728 34.4139 63.4686 31.7405 64.2826C29.0671 65.0938 27.4665 67.421 28.1629 69.4713C28.8593 71.5272 31.5889 72.5314 34.2623 71.7174ZM27.744 86.0478C27.744 85.7768 27.7072 85.5112 27.6365 85.2568C27.5783 85.0431 28.0094 84.8092 28.6793 84.4457C29.3445 84.0848 30.245 83.5962 31.1358 82.8728C32.2928 81.9324 33 80.6906 33 79.3327C33 77.9968 32.3211 76.7772 31.198 75.8424C30.2418 75.0475 29.2504 74.5444 28.5646 74.1964C28.0048 73.9124 27.6487 73.7317 27.6818 73.58C27.7242 73.3781 27.7468 73.1707 27.7468 72.9605C27.7468 70.7728 25.3395 69 22.3748 69C19.4045 69 17 70.7728 17 72.9605C17 73.7017 17.4922 75.2616 17.7581 75.9696C18.505 77.947 18.4257 81.548 17.843 82.9308C17.529 83.6748 17 85.2568 17 86.0423C17 88.2272 19.4045 90 22.3748 90C25.3366 90.0055 27.744 88.2355 27.744 86.0478ZM37.8371 91.4722C38.5335 89.4187 36.9328 87.0937 34.2623 86.2823C31.5861 85.4682 28.8593 86.4754 28.1629 88.5262C27.4665 90.5797 29.0671 92.9047 31.7405 93.7189C34.4111 94.5302 37.1407 93.5258 37.8371 91.4722ZM40.7391 88.9005C37.7301 88.383 35.6342 85.9967 36.0534 83.5656C36.4725 81.1346 39.2519 79.582 42.2609 80.0995C45.2699 80.617 47.3658 83.0033 46.9466 85.4344C46.5248 87.8654 43.7481 89.418 40.7391 88.9005Z" fill="#D5D5FB" />
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M94.2607 21.9002C91.2516 22.4186 88.4751 20.8663 88.0533 18.4358C87.6342 16.0053 89.7322 13.6174 92.7386 13.099C95.7477 12.5834 98.527 14.1329 98.9461 16.5634C99.3678 18.9938 97.2698 21.3846 94.2607 21.9002ZM86.2623 14.7174C88.9329 13.9035 90.5335 11.579 89.8371 9.52592C89.1435 7.47282 86.4139 6.46864 83.7405 7.28261C81.0671 8.09378 79.4665 10.421 80.1629 12.4713C80.8593 14.5272 83.5889 15.5314 86.2623 14.7174ZM79.744 29.0478C79.744 28.7768 79.7072 28.5112 79.6365 28.2568C79.5783 28.0431 80.0094 27.8092 80.6793 27.4457C81.3445 27.0848 82.245 26.5962 83.1358 25.8728C84.2928 24.9324 85 23.6906 85 22.3327C85 20.9968 84.3211 19.7772 83.198 18.8424C82.2418 18.0475 81.2504 17.5444 80.5646 17.1964C80.0048 16.9124 79.6487 16.7317 79.6818 16.58C79.7242 16.3781 79.7468 16.1707 79.7468 15.9605C79.7468 13.7728 77.3395 12 74.3748 12C71.4045 12 69 13.7728 69 15.9605C69 16.7017 69.4922 18.2616 69.7581 18.9696C70.505 20.947 70.4257 24.548 69.843 25.9308C69.529 26.6748 69 28.2568 69 29.0423C69 31.2272 71.4045 33 74.3748 33C77.3366 33.0055 79.744 31.2355 79.744 29.0478ZM89.8371 34.4722C90.5335 32.4187 88.9328 30.0937 86.2623 29.2823C83.5861 28.4682 80.8593 29.4754 80.1629 31.5262C79.4665 33.5797 81.0671 35.9047 83.7405 36.7189C86.4111 37.5302 89.1407 36.5258 89.8371 34.4722ZM92.7391 31.9005C89.7301 31.383 87.6342 28.9967 88.0534 26.5656C88.4725 24.1346 91.2519 22.582 94.2609 23.0995C97.2699 23.617 99.3658 26.0033 98.9466 28.4344C98.5248 30.8654 95.7481 32.418 92.7391 31.9005Z" fill="#D5D5FB" />
@@ -825,7 +832,7 @@
 										</div>
 										<div class="slide-price__column slide-price__column_right">
 											<div class="slide-price__picture-ibg">
-												<picture><source srcset="img/price/therapy.webp" type="image/webp"><img src="img/price/therapy.jpg?_v=1639493455109" alt="Картинка"></picture>
+												<picture><source srcset="img/price/therapy.webp" type="image/webp"><img src="img/price/therapy.jpg?_v=1639734067312" alt="Картинка"></picture>
 											</div>
 										</div>
 									</div>
@@ -863,7 +870,7 @@
 													</div>
 												</div>
 												<button type="button" class="slide-price_button button">
-													<svg class="button_decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<svg class="button__decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<g clip-path="url(#clip0_260_6573)">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M42.2607 78.9002C39.2516 79.4186 36.4751 77.8663 36.0533 75.4358C35.6342 73.0053 37.7322 70.6174 40.7386 70.099C43.7477 69.5834 46.527 71.1329 46.9461 73.5634C47.3678 75.9938 45.2698 78.3846 42.2607 78.9002ZM34.2623 71.7174C36.9329 70.9035 38.5335 68.579 37.8371 66.5259C37.1435 64.4728 34.4139 63.4686 31.7405 64.2826C29.0671 65.0938 27.4665 67.421 28.1629 69.4713C28.8593 71.5272 31.5889 72.5314 34.2623 71.7174ZM27.744 86.0478C27.744 85.7768 27.7072 85.5112 27.6365 85.2568C27.5783 85.0431 28.0094 84.8092 28.6793 84.4457C29.3445 84.0848 30.245 83.5962 31.1358 82.8728C32.2928 81.9324 33 80.6906 33 79.3327C33 77.9968 32.3211 76.7772 31.198 75.8424C30.2418 75.0475 29.2504 74.5444 28.5646 74.1964C28.0048 73.9124 27.6487 73.7317 27.6818 73.58C27.7242 73.3781 27.7468 73.1707 27.7468 72.9605C27.7468 70.7728 25.3395 69 22.3748 69C19.4045 69 17 70.7728 17 72.9605C17 73.7017 17.4922 75.2616 17.7581 75.9696C18.505 77.947 18.4257 81.548 17.843 82.9308C17.529 83.6748 17 85.2568 17 86.0423C17 88.2272 19.4045 90 22.3748 90C25.3366 90.0055 27.744 88.2355 27.744 86.0478ZM37.8371 91.4722C38.5335 89.4187 36.9328 87.0937 34.2623 86.2823C31.5861 85.4682 28.8593 86.4754 28.1629 88.5262C27.4665 90.5797 29.0671 92.9047 31.7405 93.7189C34.4111 94.5302 37.1407 93.5258 37.8371 91.4722ZM40.7391 88.9005C37.7301 88.383 35.6342 85.9967 36.0534 83.5656C36.4725 81.1346 39.2519 79.582 42.2609 80.0995C45.2699 80.617 47.3658 83.0033 46.9466 85.4344C46.5248 87.8654 43.7481 89.418 40.7391 88.9005Z" fill="#D5D5FB" />
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M94.2607 21.9002C91.2516 22.4186 88.4751 20.8663 88.0533 18.4358C87.6342 16.0053 89.7322 13.6174 92.7386 13.099C95.7477 12.5834 98.527 14.1329 98.9461 16.5634C99.3678 18.9938 97.2698 21.3846 94.2607 21.9002ZM86.2623 14.7174C88.9329 13.9035 90.5335 11.579 89.8371 9.52592C89.1435 7.47282 86.4139 6.46864 83.7405 7.28261C81.0671 8.09378 79.4665 10.421 80.1629 12.4713C80.8593 14.5272 83.5889 15.5314 86.2623 14.7174ZM79.744 29.0478C79.744 28.7768 79.7072 28.5112 79.6365 28.2568C79.5783 28.0431 80.0094 27.8092 80.6793 27.4457C81.3445 27.0848 82.245 26.5962 83.1358 25.8728C84.2928 24.9324 85 23.6906 85 22.3327C85 20.9968 84.3211 19.7772 83.198 18.8424C82.2418 18.0475 81.2504 17.5444 80.5646 17.1964C80.0048 16.9124 79.6487 16.7317 79.6818 16.58C79.7242 16.3781 79.7468 16.1707 79.7468 15.9605C79.7468 13.7728 77.3395 12 74.3748 12C71.4045 12 69 13.7728 69 15.9605C69 16.7017 69.4922 18.2616 69.7581 18.9696C70.505 20.947 70.4257 24.548 69.843 25.9308C69.529 26.6748 69 28.2568 69 29.0423C69 31.2272 71.4045 33 74.3748 33C77.3366 33.0055 79.744 31.2355 79.744 29.0478ZM89.8371 34.4722C90.5335 32.4187 88.9328 30.0937 86.2623 29.2823C83.5861 28.4682 80.8593 29.4754 80.1629 31.5262C79.4665 33.5797 81.0671 35.9047 83.7405 36.7189C86.4111 37.5302 89.1407 36.5258 89.8371 34.4722ZM92.7391 31.9005C89.7301 31.383 87.6342 28.9967 88.0534 26.5656C88.4725 24.1346 91.2519 22.582 94.2609 23.0995C97.2699 23.617 99.3658 26.0033 98.9466 28.4344C98.5248 30.8654 95.7481 32.418 92.7391 31.9005Z" fill="#D5D5FB" />
@@ -893,7 +900,7 @@
 										</div>
 										<div class="slide-price__column slide-price__column_right">
 											<div class="slide-price__picture-ibg">
-												<picture><source srcset="img/price/therapy.webp" type="image/webp"><img src="img/price/therapy.jpg?_v=1639493455109" alt="Картинка"></picture>
+												<picture><source srcset="img/price/therapy.webp" type="image/webp"><img src="img/price/therapy.jpg?_v=1639734067312" alt="Картинка"></picture>
 											</div>
 										</div>
 									</div>
@@ -933,7 +940,7 @@
 													</div>
 												</div>
 												<button type="button" class="slide-price_button button">
-													<svg class="button_decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<svg class="button__decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<g clip-path="url(#clip0_260_6573)">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M42.2607 78.9002C39.2516 79.4186 36.4751 77.8663 36.0533 75.4358C35.6342 73.0053 37.7322 70.6174 40.7386 70.099C43.7477 69.5834 46.527 71.1329 46.9461 73.5634C47.3678 75.9938 45.2698 78.3846 42.2607 78.9002ZM34.2623 71.7174C36.9329 70.9035 38.5335 68.579 37.8371 66.5259C37.1435 64.4728 34.4139 63.4686 31.7405 64.2826C29.0671 65.0938 27.4665 67.421 28.1629 69.4713C28.8593 71.5272 31.5889 72.5314 34.2623 71.7174ZM27.744 86.0478C27.744 85.7768 27.7072 85.5112 27.6365 85.2568C27.5783 85.0431 28.0094 84.8092 28.6793 84.4457C29.3445 84.0848 30.245 83.5962 31.1358 82.8728C32.2928 81.9324 33 80.6906 33 79.3327C33 77.9968 32.3211 76.7772 31.198 75.8424C30.2418 75.0475 29.2504 74.5444 28.5646 74.1964C28.0048 73.9124 27.6487 73.7317 27.6818 73.58C27.7242 73.3781 27.7468 73.1707 27.7468 72.9605C27.7468 70.7728 25.3395 69 22.3748 69C19.4045 69 17 70.7728 17 72.9605C17 73.7017 17.4922 75.2616 17.7581 75.9696C18.505 77.947 18.4257 81.548 17.843 82.9308C17.529 83.6748 17 85.2568 17 86.0423C17 88.2272 19.4045 90 22.3748 90C25.3366 90.0055 27.744 88.2355 27.744 86.0478ZM37.8371 91.4722C38.5335 89.4187 36.9328 87.0937 34.2623 86.2823C31.5861 85.4682 28.8593 86.4754 28.1629 88.5262C27.4665 90.5797 29.0671 92.9047 31.7405 93.7189C34.4111 94.5302 37.1407 93.5258 37.8371 91.4722ZM40.7391 88.9005C37.7301 88.383 35.6342 85.9967 36.0534 83.5656C36.4725 81.1346 39.2519 79.582 42.2609 80.0995C45.2699 80.617 47.3658 83.0033 46.9466 85.4344C46.5248 87.8654 43.7481 89.418 40.7391 88.9005Z" fill="#D5D5FB" />
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M94.2607 21.9002C91.2516 22.4186 88.4751 20.8663 88.0533 18.4358C87.6342 16.0053 89.7322 13.6174 92.7386 13.099C95.7477 12.5834 98.527 14.1329 98.9461 16.5634C99.3678 18.9938 97.2698 21.3846 94.2607 21.9002ZM86.2623 14.7174C88.9329 13.9035 90.5335 11.579 89.8371 9.52592C89.1435 7.47282 86.4139 6.46864 83.7405 7.28261C81.0671 8.09378 79.4665 10.421 80.1629 12.4713C80.8593 14.5272 83.5889 15.5314 86.2623 14.7174ZM79.744 29.0478C79.744 28.7768 79.7072 28.5112 79.6365 28.2568C79.5783 28.0431 80.0094 27.8092 80.6793 27.4457C81.3445 27.0848 82.245 26.5962 83.1358 25.8728C84.2928 24.9324 85 23.6906 85 22.3327C85 20.9968 84.3211 19.7772 83.198 18.8424C82.2418 18.0475 81.2504 17.5444 80.5646 17.1964C80.0048 16.9124 79.6487 16.7317 79.6818 16.58C79.7242 16.3781 79.7468 16.1707 79.7468 15.9605C79.7468 13.7728 77.3395 12 74.3748 12C71.4045 12 69 13.7728 69 15.9605C69 16.7017 69.4922 18.2616 69.7581 18.9696C70.505 20.947 70.4257 24.548 69.843 25.9308C69.529 26.6748 69 28.2568 69 29.0423C69 31.2272 71.4045 33 74.3748 33C77.3366 33.0055 79.744 31.2355 79.744 29.0478ZM89.8371 34.4722C90.5335 32.4187 88.9328 30.0937 86.2623 29.2823C83.5861 28.4682 80.8593 29.4754 80.1629 31.5262C79.4665 33.5797 81.0671 35.9047 83.7405 36.7189C86.4111 37.5302 89.1407 36.5258 89.8371 34.4722ZM92.7391 31.9005C89.7301 31.383 87.6342 28.9967 88.0534 26.5656C88.4725 24.1346 91.2519 22.582 94.2609 23.0995C97.2699 23.617 99.3658 26.0033 98.9466 28.4344C98.5248 30.8654 95.7481 32.418 92.7391 31.9005Z" fill="#D5D5FB" />
@@ -963,7 +970,7 @@
 										</div>
 										<div class="slide-price__column slide-price__column_right">
 											<div class="slide-price__picture-ibg">
-												<picture><source srcset="img/price/vactine.webp" type="image/webp"><img src="img/price/vactine.jpg?_v=1639493455109" alt="Картинка"></picture>
+												<picture><source srcset="img/price/vactine.webp" type="image/webp"><img src="img/price/vactine.jpg?_v=1639734067312" alt="Картинка"></picture>
 											</div>
 										</div>
 									</div>
@@ -1001,7 +1008,7 @@
 													</div>
 												</div>
 												<button type="button" class="slide-price_button button">
-													<svg class="button_decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<svg class="button__decor-paws" width="463" height="94" viewBox="0 0 463 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<g clip-path="url(#clip0_260_6573)">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M42.2607 78.9002C39.2516 79.4186 36.4751 77.8663 36.0533 75.4358C35.6342 73.0053 37.7322 70.6174 40.7386 70.099C43.7477 69.5834 46.527 71.1329 46.9461 73.5634C47.3678 75.9938 45.2698 78.3846 42.2607 78.9002ZM34.2623 71.7174C36.9329 70.9035 38.5335 68.579 37.8371 66.5259C37.1435 64.4728 34.4139 63.4686 31.7405 64.2826C29.0671 65.0938 27.4665 67.421 28.1629 69.4713C28.8593 71.5272 31.5889 72.5314 34.2623 71.7174ZM27.744 86.0478C27.744 85.7768 27.7072 85.5112 27.6365 85.2568C27.5783 85.0431 28.0094 84.8092 28.6793 84.4457C29.3445 84.0848 30.245 83.5962 31.1358 82.8728C32.2928 81.9324 33 80.6906 33 79.3327C33 77.9968 32.3211 76.7772 31.198 75.8424C30.2418 75.0475 29.2504 74.5444 28.5646 74.1964C28.0048 73.9124 27.6487 73.7317 27.6818 73.58C27.7242 73.3781 27.7468 73.1707 27.7468 72.9605C27.7468 70.7728 25.3395 69 22.3748 69C19.4045 69 17 70.7728 17 72.9605C17 73.7017 17.4922 75.2616 17.7581 75.9696C18.505 77.947 18.4257 81.548 17.843 82.9308C17.529 83.6748 17 85.2568 17 86.0423C17 88.2272 19.4045 90 22.3748 90C25.3366 90.0055 27.744 88.2355 27.744 86.0478ZM37.8371 91.4722C38.5335 89.4187 36.9328 87.0937 34.2623 86.2823C31.5861 85.4682 28.8593 86.4754 28.1629 88.5262C27.4665 90.5797 29.0671 92.9047 31.7405 93.7189C34.4111 94.5302 37.1407 93.5258 37.8371 91.4722ZM40.7391 88.9005C37.7301 88.383 35.6342 85.9967 36.0534 83.5656C36.4725 81.1346 39.2519 79.582 42.2609 80.0995C45.2699 80.617 47.3658 83.0033 46.9466 85.4344C46.5248 87.8654 43.7481 89.418 40.7391 88.9005Z" fill="#D5D5FB" />
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M94.2607 21.9002C91.2516 22.4186 88.4751 20.8663 88.0533 18.4358C87.6342 16.0053 89.7322 13.6174 92.7386 13.099C95.7477 12.5834 98.527 14.1329 98.9461 16.5634C99.3678 18.9938 97.2698 21.3846 94.2607 21.9002ZM86.2623 14.7174C88.9329 13.9035 90.5335 11.579 89.8371 9.52592C89.1435 7.47282 86.4139 6.46864 83.7405 7.28261C81.0671 8.09378 79.4665 10.421 80.1629 12.4713C80.8593 14.5272 83.5889 15.5314 86.2623 14.7174ZM79.744 29.0478C79.744 28.7768 79.7072 28.5112 79.6365 28.2568C79.5783 28.0431 80.0094 27.8092 80.6793 27.4457C81.3445 27.0848 82.245 26.5962 83.1358 25.8728C84.2928 24.9324 85 23.6906 85 22.3327C85 20.9968 84.3211 19.7772 83.198 18.8424C82.2418 18.0475 81.2504 17.5444 80.5646 17.1964C80.0048 16.9124 79.6487 16.7317 79.6818 16.58C79.7242 16.3781 79.7468 16.1707 79.7468 15.9605C79.7468 13.7728 77.3395 12 74.3748 12C71.4045 12 69 13.7728 69 15.9605C69 16.7017 69.4922 18.2616 69.7581 18.9696C70.505 20.947 70.4257 24.548 69.843 25.9308C69.529 26.6748 69 28.2568 69 29.0423C69 31.2272 71.4045 33 74.3748 33C77.3366 33.0055 79.744 31.2355 79.744 29.0478ZM89.8371 34.4722C90.5335 32.4187 88.9328 30.0937 86.2623 29.2823C83.5861 28.4682 80.8593 29.4754 80.1629 31.5262C79.4665 33.5797 81.0671 35.9047 83.7405 36.7189C86.4111 37.5302 89.1407 36.5258 89.8371 34.4722ZM92.7391 31.9005C89.7301 31.383 87.6342 28.9967 88.0534 26.5656C88.4725 24.1346 91.2519 22.582 94.2609 23.0995C97.2699 23.617 99.3658 26.0033 98.9466 28.4344C98.5248 30.8654 95.7481 32.418 92.7391 31.9005Z" fill="#D5D5FB" />
@@ -1031,7 +1038,7 @@
 										</div>
 										<div class="slide-price__column slide-price__column_right">
 											<div class="slide-price__picture-ibg">
-												<picture><source srcset="img/price/therapy.webp" type="image/webp"><img src="img/price/therapy.jpg?_v=1639493455109" alt="Картинка"></picture>
+												<picture><source srcset="img/price/therapy.webp" type="image/webp"><img src="img/price/therapy.jpg?_v=1639734067312" alt="Картинка"></picture>
 											</div>
 										</div>
 									</div>
@@ -1041,7 +1048,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="page__reviews reviews">
+			<section id="reviews" class="page__reviews reviews">
 				<div class="reviews__container">
 					<h2 class="reviews__title title">
 						<svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1331,25 +1338,27 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="page__request request">
+			</section>
+			<section class="page__request request">
 				<div class="request__container">
 					<div class="request__title-block-media"></div>
 					<div class="request__row">
 						<div class="request__column request__column_image">
 							<div class="request__picture-ibg">
-								<picture><source srcset="img/request/cat.webp" type="image/webp"><img src="img/request/cat.png?_v=1639493455109" alt="Картинка"></picture>
+								<picture><source srcset="img/request/cat.webp" type="image/webp"><img src="img/request/cat.png?_v=1639734067312" alt="Картинка"></picture>
 							</div>
 						</div>
 						<div class="request__column request__column_content">
 							<div class="request__content">
 								<form data-ajax data-test data-message="" action="#" method="POST" class="request__form form-request">
-									<h3 data-da=".request__title-block-media,999.98" class="form-request__title title">
-										<svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4.50873 15.2195C9.38829 7.01185 18.9256 6.80213e-06 29.7198 6.3303e-06C40.514 0.0543577 52.4911 7.12056 64.0246 9.78397C75.632 12.4474 86.8698 10.6537 96.2593 13.0453C105.723 15.4369 113.412 22.0139 117.182 29.7867C120.879 37.5052 120.657 46.3651 118.143 55.225C115.556 64.085 110.676 72.8905 101.952 78.7609C93.302 84.5769 80.8813 87.5121 68.0909 89.0341C55.2266 90.556 41.9926 90.6104 31.5681 86.7511C21.1436 82.8376 13.6025 74.956 8.72289 66.8027C3.7694 58.7038 1.55141 50.3331 0.516356 41.5275C-0.518703 32.7219 -0.370837 23.3728 4.50873 15.2195Z" fill="#E6E6FC" />
-										</svg>
-										Оформите <span>заявку</span>
-									</h3>
+									<div class="form-request__title-block">
+										<h3 data-da=".request__title-block-media,999.98" class="form-request__title title">
+											<svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M4.50873 15.2195C9.38829 7.01185 18.9256 6.80213e-06 29.7198 6.3303e-06C40.514 0.0543577 52.4911 7.12056 64.0246 9.78397C75.632 12.4474 86.8698 10.6537 96.2593 13.0453C105.723 15.4369 113.412 22.0139 117.182 29.7867C120.879 37.5052 120.657 46.3651 118.143 55.225C115.556 64.085 110.676 72.8905 101.952 78.7609C93.302 84.5769 80.8813 87.5121 68.0909 89.0341C55.2266 90.556 41.9926 90.6104 31.5681 86.7511C21.1436 82.8376 13.6025 74.956 8.72289 66.8027C3.7694 58.7038 1.55141 50.3331 0.516356 41.5275C-0.518703 32.7219 -0.370837 23.3728 4.50873 15.2195Z" fill="#E6E6FC" />
+											</svg>
+											Оформите <span>заявку</span>
+										</h3>
+									</div>
 									<div class="form-request__row form-request__row_margin">
 										<div class="form-request__input-block">
 											<input data-required autocomplete="off" type="text" name="name" placeholder="Ваше имя" data-error="" class="form-request__input input">
@@ -1368,7 +1377,7 @@
 											<svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M4.50873 15.2195C9.38829 7.01185 18.9256 6.80213e-06 29.7198 6.3303e-06C40.514 0.0543577 52.4911 7.12056 64.0246 9.78397C75.632 12.4474 86.8698 10.6537 96.2593 13.0453C105.723 15.4369 113.412 22.0139 117.182 29.7867C120.879 37.5052 120.657 46.3651 118.143 55.225C115.556 64.085 110.676 72.8905 101.952 78.7609C93.302 84.5769 80.8813 87.5121 68.0909 89.0341C55.2266 90.556 41.9926 90.6104 31.5681 86.7511C21.1436 82.8376 13.6025 74.956 8.72289 66.8027C3.7694 58.7038 1.55141 50.3331 0.516356 41.5275C-0.518703 32.7219 -0.370837 23.3728 4.50873 15.2195Z" fill="#E6E6FC" />
 											</svg>
-											<span>Спасибо,</span> выбрали нас!
+											<span>Спасибо,</span> что выбрали нас!
 										</p>
 										<p class="form-request__answer-text">В течении дня с вами свяжется администратор для
 											уточнения записи.</p>
@@ -1390,7 +1399,29 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
+			<section class="page__questions questions">
+				<div class="questions__container">
+					<div data-tabs class="questions__tabs tabs-questions">
+						<nav data-tabs-titles class="tabs-questions__navigation">
+							<button type="submit" class="tabs-questions__title _tab-active">Таб №1</button>
+							<button type="submit" class="tabs-questions__title">Таб №2</button>
+							<button type="submit" class="tabs-questions__title">Таб №3</button>
+						</nav>
+						<div data-tabs-body class="tabs-questions__content">
+							<div class="tabs-questions__body">
+								1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error molestias!
+							</div>
+							<div class="tabs-questions__body">
+								2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error molestias!
+							</div>
+							<div class="tabs-questions__body">
+								3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error molestias!
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -1413,7 +1444,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20211214165055"></script>
+	<script src="js/app.min.js?_v=20211217114107"></script>
 
 </body>
 

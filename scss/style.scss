@@ -1,0 +1,296 @@
+@use "sass:math";
+
+// Подключение миксинов ===========================================================================================================================================================================================================================================================================
+@import "base/mixins";
+
+// Подключение шрифтов ===========================================================================================================================================================================================================================================================================
+//&display=swap - добавить при подключении через плагин
+@import "base/fonts";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800&display=swap&subset=cyrillic-ext");
+
+// Подключение иконочных шрифтов ==============================================================================================================================================================================================================================================================================
+@import "base/icons";
+
+// Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
+$fontFamily: "Montserrat", arial, sans-serif;
+$fontSize: rem(18); // где 14(px) - размер шрифта по умолчанию из макета
+
+// НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1300;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 30;
+
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+
+// Ширина страбатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(999.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+// Основной цвет шрифта
+$mainColor: #515261;
+$subColor: #605dd3;
+$subColorWhite: #9191fc;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+$initialIbg: 1;
+// Обнуление и общие параметры ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+@import "base/null";
+
+body {
+	color: $mainColor;
+	// Скролл заблокирован
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+}
+.swiper {
+	// overflow: visible !important;
+}
+// .swiper-wrapper,
+// .swiper-slide {
+// 	transition: all 0.8s ease 0s;
+// 	height: 100% !important;
+// }
+// Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	// Сайт загружен
+	.loaded & {
+	}
+	// Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+
+// Ограничивающий контейнер ======================================================================================================================================================================================================================
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+@if ($responsiveType==1) {
+	// Отзывчивая
+	[class*="__container"] {
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+			padding: 0 rem(math.div($containerPadding, 2));
+		}
+	}
+} @else {
+	// По брейк-поинтам
+	[class*="__container"] {
+		margin: 0 auto;
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+		} @else {
+			@if ($containerPadding>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: rem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: rem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding>0 and $maxWidthContainer>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}
+@if ($initialIbg==1) {
+	[class*="_ibg"] {
+		position: relative;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+}
+// Подключение базовых стилей, шаблонов (заготовок) и вспомагательных классов
+// Для подключения/отключения конкретных стилей смотри base.scss
+@import "base";
+
+// Подключение стилей отдельных блоков
+@import "header";
+@import "footer";
+
+// Подключение стилей отдельных страниц
+@import "home";
+// Основной блок страницы ====================================================================================================
+.page {
+	min-width: 0;
+	// .page__mainscreen
+	&__mainscreen {
+		padding-bottom: rem(119);
+	}
+	// .page__why-we-are
+	&__why-we-are {
+		@include adaptiveValue("margin-bottom", 193, 80);
+	}
+	// .page__clinic
+	&__clinic {
+		@include adaptiveValue("margin-bottom", 250, 130, 1330, 1000, 1);
+		@include adaptiveValue("margin-bottom", 130, 60, 998, 320, 1);
+	}
+	// .page__animals
+	&__animals {
+		@include adaptiveValue("margin-bottom", 170, 120, 1330, 1000, 1);
+		@include adaptiveValue("margin-bottom", 120, 100, 999.98, 768);
+		@include adaptiveValue("margin-bottom", 100, 80, 767.98, 479);
+		@include adaptiveValue("margin-bottom", 80, 60, 478.98, 320);
+	}
+	// .page__specialists
+	&__specialists {
+		@include adaptiveValue("margin-bottom", 170, 120, 1330, 1000, 1);
+		@include adaptiveValue("margin-bottom", 120, 100, 999.98, 768);
+		@include adaptiveValue("margin-bottom", 100, 80, 767.98, 479);
+		@include adaptiveValue("margin-bottom", 80, 60, 478.98, 320);
+	}
+	// .page__regulations
+	&__regulations {
+		@include adaptiveValue("margin-bottom", 180, 120, 1330, 1000, 1);
+		@include adaptiveValue("margin-bottom", 120, 100, 999.98, 768);
+		@include adaptiveValue("margin-bottom", 100, 80, 767.98, 479);
+		@include adaptiveValue("margin-bottom", 80, 60, 478.98, 320);
+	}
+	// .page__price
+	&__price {
+		@include adaptiveValue("margin-bottom", 204, 120, 1330, 1000, 1);
+		@include adaptiveValue("margin-bottom", 120, 100, 999.98, 768);
+		@include adaptiveValue("margin-bottom", 100, 80, 767.98, 479);
+		@include adaptiveValue("margin-bottom", 80, 60, 478.98, 320);
+	}
+	// .page__reviews
+	&__reviews {
+		@include adaptiveValue("margin-bottom", 167, 120, 1330, 1000, 1);
+		@include adaptiveValue("margin-bottom", 120, 100, 999.98, 768);
+		@include adaptiveValue("margin-bottom", 100, 80, 767.98, 479);
+		@include adaptiveValue("margin-bottom", 80, 60, 478.98, 320);
+	}
+	// .page__request
+	&__request {
+		@include adaptiveValue("margin-bottom", 145, 120, 1330, 1000, 1);
+		@include adaptiveValue("margin-bottom", 120, 100, 999.98, 768);
+		@include adaptiveValue("margin-bottom", 100, 80, 767.98, 479);
+		@include adaptiveValue("margin-bottom", 80, 60, 478.98, 320);
+	}
+	// .page__questions
+	&__questions {
+		@include adaptiveValue("margin-bottom", 180, 120, 1330, 1000, 1);
+		@include adaptiveValue("margin-bottom", 120, 100, 999.98, 768);
+		@include adaptiveValue("margin-bottom", 100, 80, 767.98, 479);
+		@include adaptiveValue("margin-bottom", 80, 60, 478.98, 320);
+	}
+	// .page__contacts
+	&__contacts {
+		@include adaptiveValue("margin-bottom", 231, 120, 1330, 1000, 1);
+		@include adaptiveValue("margin-bottom", 120, 100, 999.98, 768);
+		@include adaptiveValue("margin-bottom", 100, 80, 767.98, 479);
+		@include adaptiveValue("margin-bottom", 80, 30, 478.98, 320);
+	}
+}
+.block-logo {
+	.header & {
+		padding: 0px 0px 0px 45px;
+	}
+	.footer & {
+		min-height: 192px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		background: url("@img/footer-logo-decor.svg") center / cover no-repeat;
+		@media (max-width: em(649.98)) {
+			min-height: 155px;
+		}
+	}
+	// .logo-block__logo
+	&__logo {
+		position: relative;
+		z-index: 2;
+		font-family: "RoundedMplus1c", arial, sans-serif;
+		font-size: rem(28);
+		line-height: math.div(42, 28);
+		font-weight: 900;
+		color: $subColor;
+		text-transform: capitalize;
+		&::before {
+			content: "";
+			width: 70px;
+			height: 70px;
+			background: url("../img/icons/header/logo.svg") center / 70px no-repeat;
+			position: absolute;
+			top: 50%;
+			left: -45px;
+			transform: translate(0%, -50%);
+		}
+		&::after {
+			content: "";
+			width: 83px;
+			height: 53px;
+			position: absolute;
+			top: 3px;
+			right: 0;
+			background: url("../img/icons/header/logo-dog.svg") center / cover no-repeat;
+		}
+		@media (max-width: em(649.98)) {
+			.footer & {
+				font-size: rem(27);
+				transform: translate(10px, 0px);
+				&::before {
+					width: 56px;
+					height: 56px;
+					left: -35px;
+					background: url("../img/icons/header/logo.svg") center / cover no-repeat;
+				}
+				&::after {
+					width: 67px;
+					height: 43px;
+				}
+			}
+		}
+	}
+}
